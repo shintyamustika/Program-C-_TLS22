@@ -1,42 +1,39 @@
-# Program-C-_TLS22
-Lagrange_Shintya Tri Mustika 
-# include <iostream>
+# Program User Defined Function
+Shintya Tri Mustika 
+22/494025/TK/54159
+
+#include <iostream>
 using namespace std;
 
-int main() {
-
-  char op;
-  float num1, num2;
-
-  cout << "Enter operator: +, -, *, /: ";
-  cin >> op;
-
-  cout << "Enter two operands: ";
-  cin >> num1 >> num2;
-
-  switch(op) {
-
-    case '+':
-      cout << num1 << " + " << num2 << " = " << num1 + num2;
-      break;
-
-    case '-':
-      cout << num1 << " - " << num2 << " = " << num1 - num2;
-      break;
-
-    case '*':
-      cout << num1 << " * " << num2 << " = " << num1 * num2;
-      break;
-
-    case '/':
-      cout << num1 << " / " << num2 << " = " << num1 / num2;
-      break;
-
-    default:
-      
-      cout << "Error! operator is not correct";
-      break;
-  }
-
-  return 0;
+int find(int num)
+{
+    int first, second;
+    first = num * num;
+    second = first + num;
+    if (second > 100)
+        num = first / 10;
+    else
+        num = first / 20;
+    return num + 2;
 }
+
+int discover(int one, int two)
+{
+    int secret = 0;
+    for (int i = one; i < two; i++)
+        secret = secret + i * i;
+    return secret;
+}
+
+int main()
+{
+    cout << find(15) << endl;
+    cout << discover(3, 9) << endl;
+    cout << find(10) << " " << discover(10, find(10)) << endl;
+
+    int x = 12, y = 8;
+    cout << discover(y, x) << endl;
+
+    return 0;
+}
+
