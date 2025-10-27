@@ -1,39 +1,22 @@
 # Program User Defined Function
-Shintya Tri Mustika 
-22/494025/TK/54159
 
-#include <iostream>
-using namespace std;
+**Nama:** Shintya Tri Mustika  
+**NIM:** 22/494025/TK/54159
 
-int find(int num)
-{
-    int first, second;
-    first = num * num;
-    second = first + num;
-    if (second > 100)
-        num = first / 10;
-    else
-        num = first / 20;
-    return num + 2;
-}
+## Deskripsi
+Program ini mendemonstrasikan penggunaan **User Defined Function** dalam C++:
 
-int discover(int one, int two)
-{
-    int secret = 0;
-    for (int i = one; i < two; i++)
-        secret = secret + i * i;
-    return secret;
-}
+1. **Fungsi `find(int num)`**
+   - Menghitung nilai `first = num*num`
+   - Menghitung nilai `second = first + num`
+   - Jika `second > 100`, `num = first/10`, jika tidak `num = first/20`
+   - Return `num + 2`
 
-int main()
-{
-    cout << find(15) << endl;
-    cout << discover(3, 9) << endl;
-    cout << find(10) << " " << discover(10, find(10)) << endl;
+2. **Fungsi `discover(int one, int two)`**
+   - Menghitung jumlah kuadrat dari semua angka dari `one` sampai `two-1`
 
-    int x = 12, y = 8;
-    cout << discover(y, x) << endl;
+3. **`main()`**
+   - Memanggil fungsi `find` dan `discover` dengan beberapa input
+   - Menampilkan hasil di console
 
-    return 0;
-}
 
