@@ -20,4 +20,7 @@ Program ini mendemonstrasikan penggunaan **User Defined Function** dalam C++:
    - Menampilkan hasil di console
 
 ## Contoh Output
-
+find(15) = 24
+discover(3, 9) = 199
+find(10) = 12, discover(10, find(10)) = 12 221
+discover(8, 12) = 366
